@@ -21,7 +21,7 @@ body {
 
 
 /* =========================
-   MENU
+   NAVIGATION
 ========================= */
 
 nav {
@@ -35,15 +35,21 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    padding: 20px 8%;
+    padding: 18px 8%;
 
-    background: rgba(13, 13, 18, 0.95);
+    background: rgba(13, 13, 18, 0.88);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
     z-index: 1000;
 }
 
 nav h2 {
     font-size: 22px;
+    letter-spacing: 2px;
 }
 
 .menu {
@@ -52,15 +58,38 @@ nav h2 {
 }
 
 .menu a {
+    position: relative;
+
     color: white;
     text-decoration: none;
+
     font-size: 14px;
 
     transition: 0.3s;
 }
 
 .menu a:hover {
-    color: #7c7cff;
+    color: #8c6cff;
+}
+
+.menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: #8c6cff;
+
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
 }
 
 
@@ -75,57 +104,138 @@ nav h2 {
     align-items: center;
     justify-content: space-between;
 
-    gap: 60px;
+    gap: 80px;
 
-    padding: 130px 10% 80px;
+    padding: 120px 8% 70px;
+
+    position: relative;
+
+    overflow: hidden;
 }
+
+
+/* แสงม่วง */
+
+.home::after {
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    right: 4%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: radial-gradient(
+        circle,
+        rgba(124, 70, 255, 0.30) 0%,
+        rgba(124, 70, 255, 0.12) 35%,
+        transparent 70%
+    );
+
+    filter: blur(25px);
+
+    pointer-events: none;
+}
+
+
+/* HOME TEXT */
 
 .home-text {
     max-width: 650px;
+
+    position: relative;
+
+    z-index: 2;
 }
+
+
+/* Welcome */
 
 .home-text > p:first-child {
+    color: #8c6cff;
+
     font-size: 14px;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
 }
 
+
+/* ชื่อ */
+
 .home h1 {
-    font-size: 55px;
-    line-height: 1.2;
+    font-size: 58px;
+
+    line-height: 1.15;
+
     margin-bottom: 20px;
+
+    font-weight: 700;
 }
 
 .home h1 span {
-    color: #7c7cff;
+    color: #8b63ff;
 }
+
+
+/* Student Designer Developer */
 
 .home h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
+    font-size: 21px;
+
+    color: #ffffff;
+
+    margin-bottom: 18px;
+
+    font-weight: 500;
 }
 
-.home-text p {
+
+/* คำอธิบาย */
+
+.home-text p:not(:first-child) {
+    color: #b8b8c2;
+
+    font-size: 14px;
+
     margin-bottom: 25px;
 }
 
-.button {
+
+/* =========================
+   HOME BUTTON
+========================= */
+
+.home .button {
     display: inline-block;
 
-    padding: 12px 25px;
+    padding: 12px 23px;
 
-    background: #7c7cff;
+    background: #7652f5;
+
     color: white;
 
     text-decoration: none;
 
-    border-radius: 8px;
+    border-radius: 6px;
+
+    font-size: 14px;
 
     transition: 0.3s;
 }
 
-.button:hover {
+.home .button:hover {
+    background: #896cff;
+
     transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 25px rgba(118, 82, 245, 0.3);
 }
 
 
@@ -134,14 +244,25 @@ nav h2 {
 ========================= */
 
 .profile {
-    width: 350px;
-    height: 350px;
+    width: 295px;
+    height: 380px;
 
     flex-shrink: 0;
 
+    position: relative;
+
+    z-index: 2;
+
     overflow: hidden;
 
-    border-radius: 20px;
+    border-radius: 17px;
+
+    background: #17171f;
+
+    border: 1px solid #35353f;
+
+    box-shadow:
+        0 0 40px rgba(124, 70, 255, 0.08);
 }
 
 .profile img {
@@ -172,7 +293,7 @@ section > h2 {
 
 
 /* =========================
-   ABOUT ME
+   ABOUT
 ========================= */
 
 .about-content {
@@ -197,6 +318,11 @@ section > h2 {
 
 .about-item:hover {
     transform: translateY(-5px);
+
+    border-color: #7c7cff;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 .about-item h3 {
@@ -210,6 +336,8 @@ section > h2 {
 .about-item p {
     margin: 0;
 
+    color: #c0c0c0;
+
     line-height: 1.7;
 }
 
@@ -217,6 +345,8 @@ section > h2 {
     margin: 0;
 
     padding-left: 20px;
+
+    color: #c0c0c0;
 
     line-height: 1.8;
 }
@@ -254,6 +384,9 @@ section > h2 {
     transform: translateY(-5px);
 
     border-color: #7c7cff;
+
+    box-shadow:
+        0 10px 25px rgba(80, 80, 255, 0.15);
 }
 
 
@@ -283,6 +416,11 @@ section > h2 {
 
 .card:hover {
     transform: translateY(-8px);
+
+    border-color: #7c7cff;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -330,9 +468,17 @@ section > h2 {
 }
 
 .card-content span {
+    display: inline-block;
+
     font-size: 13px;
 
-    color: #7c7cff;
+    color: #a5a5ff;
+
+    background: rgba(124, 124, 255, 0.1);
+
+    padding: 4px 9px;
+
+    border-radius: 6px;
 }
 
 
@@ -342,9 +488,13 @@ section > h2 {
 
 #contact {
     text-align: center;
+
+    padding-bottom: 120px;
 }
 
 #contact > p {
+    color: #c0c0c0;
+
     margin-bottom: 25px;
 }
 
@@ -380,6 +530,9 @@ section > h2 {
     transform: translateY(-3px);
 
     border-color: #7c7cff;
+
+    box-shadow:
+        0 8px 25px rgba(80, 80, 255, 0.15);
 }
 
 
@@ -390,7 +543,7 @@ section > h2 {
 @media (max-width: 900px) {
 
     .home {
-        gap: 30px;
+        gap: 35px;
     }
 
     .home h1 {
@@ -398,14 +551,13 @@ section > h2 {
     }
 
     .profile {
-        width: 280px;
-        height: 280px;
+        width: 260px;
+        height: 340px;
     }
 
     .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 
@@ -415,7 +567,7 @@ section > h2 {
 
 @media (max-width: 768px) {
 
-    /* MENU */
+    /* NAV */
 
     nav {
         padding: 15px 20px;
@@ -432,8 +584,6 @@ section > h2 {
     .menu {
         width: 100%;
 
-        display: flex;
-
         justify-content: center;
 
         flex-wrap: wrap;
@@ -449,45 +599,54 @@ section > h2 {
     /* HOME */
 
     .home {
-        min-height: auto;
+        min-height: 100vh;
 
         flex-direction: column;
 
+        justify-content: center;
+
         text-align: center;
 
-        padding: 150px 20px 70px;
+        padding: 130px 20px 60px;
 
-        gap: 40px;
+        gap: 45px;
+    }
+
+    .home::after {
+        width: 450px;
+        height: 450px;
+
+        right: 50%;
+        top: 60%;
+
+        transform: translate(50%, -50%);
     }
 
     .home-text {
         width: 100%;
     }
 
+    .home-text > p:first-child {
+        font-size: 11px;
+
+        letter-spacing: 3px;
+    }
+
     .home h1 {
-        font-size: 34px;
+        font-size: 36px;
     }
 
     .home h2 {
         font-size: 18px;
     }
 
-    .home-text > p:first-child {
-        font-size: 11px;
-
-        letter-spacing: 2px;
+    .home-text p:not(:first-child) {
+        font-size: 14px;
     }
-
-    .home-text > p:not(:first-child) {
-        font-size: 15px;
-    }
-
-
-    /* PROFILE */
 
     .profile {
-        width: 240px;
-        height: 240px;
+        width: 220px;
+        height: 285px;
     }
 
 
@@ -504,7 +663,7 @@ section > h2 {
     }
 
 
-    /* ABOUT ME */
+    /* ABOUT */
 
     .about-content {
         grid-template-columns: 1fr;
@@ -567,5 +726,4 @@ section > h2 {
     .contact-links a {
         width: 100%;
     }
-
 }

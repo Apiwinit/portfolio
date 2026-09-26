@@ -1,48 +1,274 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolioคับ</title>
+
+    <title>Portfolio | อภิวินิต เรือนหล้า</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- เมนูด้านบน -->
+    <!-- =========================
+         MENU
+    ========================= -->
+
     <nav>
+
         <h2>PORTFOLIO</h2>
 
         <div class="menu">
-            <a href="#">HOME</a>
-            <a href="#">ABOUT</a>
-            <a href="#">PROJECTS</a>
-            <a href="#">CONTACT</a>
+
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#contact">CONTACT</a>
 
         </div>
+
     </nav>
 
-    <main class="hero">
 
-        <div class="hero-text">
+    <!-- =========================
+         HOME
+    ========================= -->
+
+    <section id="home" class="home">
+
+        <div class="home-text">
+
             <p>WELCOME TO MY PORTFOLIO</p>
 
-            <h1><span>by.</span>นายอภิวินิต เรือนหล้า
+            <h1>
+                สวัสดีครับ<br>
+                ผม <span>อภิวินิต เรือนหล้า</span>
             </h1>
 
-            <h2>ยินดีต้อนรับเข้าสู่ <span>Portfolio</span> ของผมครับ</h2>
+            <h2>
+                Student • Designer • Developer
+            </h2>
 
-            <p><span>Portfolio</span> สำหรับแสดงผลงาน
-                การออกแบบ โปสเตอร์ และงานด้านดิจิทัล</p>เชิญครับ
+            <p>
+                ผมสนใจด้านการออกแบบ เทคโนโลยี
+                การสร้างเว็บไซต์ และงานดิจิทัล
+            </p>
 
-            <button>VIEW MY PROJECTS</button>
+            <a href="#portfolio" class="button">
+                ดูผลงานของผม
+            </a>
+
         </div>
 
-        <div class="hero-image">
-    <img src="profile.png" alt="Profile">
-</div>
 
-    </main>
+        <!-- PROFILE IMAGE -->
+
+        <div class="profile">
+
+            <img src="profile.png" alt="รูปโปรไฟล์">
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT ME -->
+<section id="about">
+
+    <h2>ABOUT ME</h2>
+
+    <div class="about-content">
+
+        <div class="about-item">
+            <h3>ชื่อ</h3>
+            <p>อภิวินิต เรือนหล้า</p>
+        </div>
+
+        <div class="about-item">
+            <h3>การศึกษา</h3>
+            <p>นักเรียนระดับมัธยมศึกษาตอนปลาย</p>
+        </div>
+
+        <div class="about-item">
+            <h3>ความสนใจ</h3>
+            <ul>
+                <li>Technology</li>
+                <li>Web Development</li>
+                <li>3D Design</li>
+                <li>Graphic Design</li>
+            </ul>
+        </div>
+
+        <div class="about-item">
+            <h3>เป้าหมาย</h3>
+            <p>
+                พัฒนาทักษะด้านเทคโนโลยีและการออกแบบ
+                เพื่อนำไปต่อยอดในการศึกษาต่อ
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
+
+    <section id="skills">
+
+        <h2>SKILLS</h2>
+
+        <ul>
+
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SketchUp</li>
+            <li>Graphic Design</li>
+            <li>Web Design</li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- =========================
+         PORTFOLIO
+    ========================= -->
+
+   <!-- =========================
+     PORTFOLIO
+========================= -->
+
+<section id="portfolio">
+
+    <h2>MY PORTFOLIO</h2>
+
+    <div class="portfolio-container">
+
+
+        <!-- ผลงาน SketchUp -->
+
+        <div class="card">
+
+            <div class="card-image">
+                <img src="sketchup.jpg" alt="ผลงาน SketchUp">
+            </div>
+
+            <div class="card-content">
+
+                <h3>งานออกแบบด้วย SketchUp</h3>
+
+                <p>
+                    ผลงานการออกแบบเฟอร์นิเจอร์
+                    และงาน 3D ที่สร้างด้วย SketchUp
+                </p>
+
+                <span>3D Design</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ผลงาน Website -->
+
+        <div class="card">
+
+            <div class="card-image">
+                <img src="website.png" alt="ผลงาน Website">
+            </div>
+
+            <div class="card-content">
+
+                <h3>เว็บไซต์ Portfolio</h3>
+
+                <p>
+                    เว็บไซต์ Portfolio ที่ผมสร้างขึ้น
+                    ด้วย HTML และ CSS
+                </p>
+
+                <span>Web Design</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ผลงาน Graphic -->
+
+        <div class="card">
+
+            <div class="card-image">
+                <img src="graphic.png" alt="ผลงาน Graphic Design">
+            </div>
+
+            <div class="card-content">
+
+                <h3>Graphic Design</h3>
+
+                <p>
+                    ผลงานการออกแบบกราฟิก
+                    และสื่อดิจิทัล
+                </p>
+
+                <span>Graphic Design</span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact">
+
+        <h2>CONTACT</h2>
+
+        <p>
+            หากต้องการติดต่อ สามารถติดต่อผมได้
+            ผ่านช่องทางด้านล่าง
+        </p>
+
+
+        <div class="contact-links">
+
+            <!-- EMAIL -->
+
+            <a href="mailto:beambeam11627@gmail.com">
+                📧 Email
+            </a>
+
+
+            <!-- GITHUB -->
+
+            <a href="https://github.com/" target="_blank">
+                💻 GitHub
+            </a>
+
+
+            <!-- INSTAGRAM -->
+
+            <a href="https://www.instagram.com/" target="_blank">
+                📷 Instagram
+            </a>
+
+        </div>
+
+    </section>
+
 
 </body>
+
 </html>

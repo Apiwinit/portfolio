@@ -1,8 +1,5 @@
 
-/* =========================
-   RESET
-========================= */
-
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -21,11 +18,7 @@ body {
     line-height: 1.6;
 }
 
-
-/* =========================
-   NAVIGATION
-========================= */
-
+/* NAVIGATION */
 nav {
     width: 100%;
     min-height: 75px;
@@ -83,11 +76,7 @@ nav h2 {
     width: 100%;
 }
 
-
-/* =========================
-   HOME
-========================= */
-
+/* HOME */
 .home {
     min-height: 620px;
     padding: 100px 10%;
@@ -167,11 +156,7 @@ nav h2 {
     box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3);
 }
 
-
-/* =========================
-   PROFILE IMAGE
-========================= */
-
+/* PROFILE IMAGE */
 .profile {
     width: 280px;
     height: 280px;
@@ -191,11 +176,7 @@ nav h2 {
     border: 5px solid #11101a;
 }
 
-
-/* =========================
-   GLOBAL SECTION
-========================= */
-
+/* GLOBAL SECTION */
 section:not(.home) {
     padding: 90px 10%;
 }
@@ -218,11 +199,7 @@ section:not(.home) > h2::after {
     border-radius: 5px;
 }
 
-
-/* =========================
-   ABOUT
-========================= */
-
+/* ABOUT */
 #about {
     background: #101019;
 }
@@ -263,11 +240,7 @@ section:not(.home) > h2::after {
     padding-left: 20px;
 }
 
-
-/* =========================
-   SKILLS
-========================= */
-
+/* SKILLS */
 #skills {
     text-align: center;
 }
@@ -297,11 +270,7 @@ section:not(.home) > h2::after {
     transform: translateY(-3px);
 }
 
-
-/* =========================
-   PORTFOLIO
-========================= */
-
+/* PORTFOLIO */
 #portfolio {
     background: #101019;
 }
@@ -403,11 +372,7 @@ section:not(.home) > h2::after {
     justify-self: center;
 }
 
-
-/* =========================
-   CONTACT
-========================= */
-
+/* CONTACT */
 #contact {
     text-align: center;
 }
@@ -445,11 +410,7 @@ section:not(.home) > h2::after {
     transform: translateY(-3px);
 }
 
-
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER */
 footer {
     padding: 22px 10%;
     background: #08080d;
@@ -462,13 +423,8 @@ footer p {
     font-size: 12px;
 }
 
-
-/* =========================
-   TABLET
-========================= */
-
+/* TABLET */
 @media (max-width: 900px) {
-
     nav {
         padding: 15px 5%;
     }
@@ -500,13 +456,8 @@ footer p {
     }
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
+/* MOBILE */
 @media (max-width: 600px) {
-
     nav {
         padding: 15px 5%;
         flex-direction: column;
